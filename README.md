@@ -1,44 +1,50 @@
 # Enterprise Windows Helpdesk Diagnostic Toolkit
 
+A PowerShell-based Windows IT support toolkit for automating system diagnostics, basic network troubleshooting, Windows service inspection, and diagnostic report generation.
+
 ## Project Overview
 
-The **Enterprise Windows Helpdesk Diagnostic Toolkit** is a PowerShell-based IT support project designed to automate common Windows system diagnostic tasks.
+The **Enterprise Windows Helpdesk Diagnostic Toolkit** is a practical IT support automation project developed using Windows PowerShell.
 
-It collects system information, evaluates disk capacity, checks CPU and memory usage, tests network connectivity, diagnoses DNS resolution, inspects selected Windows services, and generates consolidated diagnostic reports.
+The toolkit consists of seven independent scripts that collect system information, assess disk capacity, monitor CPU and memory usage, test network connectivity, diagnose DNS resolution, inspect selected Windows services, and consolidate diagnostic results into structured reports.
 
-This project demonstrates practical technical skills relevant to entry-level IT Support, Desktop Support, and Helpdesk roles.
+The project demonstrates foundational technical skills relevant to entry-level IT Support, Desktop Support, and Helpdesk roles, with an emphasis on troubleshooting, automation, testing, and technical documentation.
 
 ## Project Objectives
 
-- Automate routine Windows diagnostic tasks.
-- Collect system and hardware information.
-- Identify potential disk-space and resource-usage concerns.
-- Troubleshoot basic internet and DNS connectivity.
-- Inspect important Windows service states.
-- Generate structured TXT and CSV diagnostic reports.
-- Practise PowerShell scripting, testing, and technical documentation.
+- Automate common Windows diagnostic tasks using PowerShell.
+- Collect operating system and hardware information.
+- Assess disk capacity and available storage.
+- Identify elevated CPU and memory usage.
+- Perform basic network connectivity and DNS checks.
+- Inspect selected Windows service states.
+- Generate structured diagnostic reports in TXT and CSV formats.
+- Develop practical skills in scripting, troubleshooting, testing, and documentation.
 
-## Features
+## Key Features
 
-| Script | Functionality |
+| Script | Description |
 |---|---|
-| `system-information.ps1` | Collects Windows, CPU, RAM, and system information |
-| `disk-health-check.ps1` | Checks disk capacity and available storage |
-| `cpu-memory-check.ps1` | Collects CPU and memory usage information |
-| `internet-connectivity.ps1` | Tests network adapters, IP connectivity, DNS, and TCP port 443 |
-| `dns-diagnostic.ps1` | Checks DNS configuration and domain resolution |
-| `windows-services-check.ps1` | Inspects selected Windows services |
-| `generate-report.ps1` | Consolidates diagnostic results into TXT and CSV reports |
+| `system-information.ps1` | Collects operating system, processor, memory, and system information. |
+| `disk-health-check.ps1` | Evaluates disk capacity and available storage space. |
+| `cpu-memory-check.ps1` | Collects CPU and memory utilization measurements. |
+| `internet-connectivity.ps1` | Checks network adapter status, external IP connectivity, DNS resolution, and TCP connectivity on port 443. |
+| `dns-diagnostic.ps1` | Examines DNS configuration and tests domain name resolution. |
+| `windows-services-check.ps1` | Inspects the operational states of selected Windows services. |
+| `generate-report.ps1` | Consolidates available diagnostic results into TXT and CSV reports. |
 
-## Technologies Used
+## Technology Stack
 
-- **Operating System:** Windows 11
-- **Scripting Language:** PowerShell
-- **Report Formats:** TXT and CSV
-- **Version Control:** Git
-- **Repository Hosting:** GitHub
+| Category | Technology |
+|---|---|
+| Operating System | Windows 11 |
+| Scripting Language | Windows PowerShell |
+| Data Formats | TXT, CSV |
+| Version Control | Git |
+| Repository Hosting | GitHub |
+| Development Environment | Windows workstation |
 
-## Project Structure
+## Repository Structure
 
 ```text
 enterprise-windows-helpdesk-project/
@@ -52,125 +58,163 @@ enterprise-windows-helpdesk-project/
 |   |-- windows-services-check.ps1
 |   |-- generate-report.ps1
 |
-|-- reports/
-|   |-- before/
-|   |-- Generated diagnostic reports
-|
 |-- documentation/
 |   |-- system-assessment.md
 |   |-- functional-testing.md
 |
 |-- README.md
+|-- .gitignore
 ```
 
-## How to Run the Project
+**Note:** Diagnostic reports are generated locally and are excluded from the public repository to avoid exposing machine-specific information.
 
-### Requirements
+## Installation and Execution
 
-- Windows 10 or Windows 11
-- Windows PowerShell 5.1 or a compatible PowerShell version
-- Appropriate permissions to execute PowerShell scripts
-- Internet connectivity for network and DNS tests
+### Prerequisites
 
-### Step 1: Clone the Repository
+- Windows 10 or Windows 11.
+- Windows PowerShell 5.1 or a compatible PowerShell environment.
+- Permission to execute PowerShell scripts.
+- An active internet connection for network and DNS diagnostics.
+
+### 1. Clone the Repository
 
 ```powershell
 git clone https://github.com/sharmiladeviramanujam/enterprise-windows-helpdesk-project.git
 ```
 
-Replace the placeholder with your actual GitHub repository URL.
-
-### Step 2: Navigate to the Project Directory
+### 2. Navigate to the Project Directory
 
 ```powershell
 cd enterprise-windows-helpdesk-project
 ```
 
-### Step 3: Run the Diagnostic Scripts
+### 3. Execute the Diagnostic Scripts
 
-Execute the scripts individually:
+Run each script individually from the project root directory:
 
 ```powershell
 .\scripts\system-information.ps1
+
 .\scripts\disk-health-check.ps1
+
 .\scripts\cpu-memory-check.ps1
+
 .\scripts\internet-connectivity.ps1
+
 .\scripts\dns-diagnostic.ps1
+
 .\scripts\windows-services-check.ps1
 ```
 
-### Step 4: Generate the Consolidated Report
+Each script performs its respective diagnostic checks and saves its output locally.
 
-After running the diagnostic scripts, execute:
+### 4. Generate the Consolidated Diagnostic Report
+
+After executing the individual diagnostic scripts, run:
 
 ```powershell
 .\scripts\generate-report.ps1
 ```
 
-The report generator collects the latest available diagnostic reports and generates consolidated TXT and CSV outputs.
+The report generator locates the latest available source reports and combines their results into consolidated TXT and CSV files.
 
-## Functional Testing Results
+Generated reports are stored in the local `reports/` directory.
 
-All seven scripts were executed successfully during the initial functional testing.
+## Functional Testing and Validation
+
+All seven scripts were executed successfully during the initial functional testing phase.
 
 | Test Category | Result |
 |---|---|
-| System Information | PASS |
-| Disk Capacity Check | PASS |
-| CPU and Memory Check | PASS |
-| Internet Connectivity | PASS |
+| System Information Collection | PASS |
+| Disk Capacity Assessment | PASS |
+| CPU and Memory Assessment | PASS |
+| Internet Connectivity Testing | PASS |
 | DNS Diagnostics | PASS |
 | Windows Services Inspection | PASS |
 | Consolidated Report Generation | PASS |
 
-### Consolidated Report Summary
+### Consolidated Report Results
 
-- Total diagnostic categories: 6
-- Successful categories: 6
-- Warnings: 0
-- Missing reports: 0
-- Failed imports: 0
-- Combined records: 17
+The report generator successfully processed six diagnostic categories.
 
-## Important Technical Notes and Limitations
+| Metric | Result |
+|---|---:|
+| Total Diagnostic Categories | 6 |
+| Successful Categories | 6 |
+| Warnings | 0 |
+| Empty Reports | 0 |
+| Missing Reports | 0 |
+| Failed Imports | 0 |
+| Combined Records | 17 |
 
-- The disk script evaluates storage capacity and available space. It does not perform a complete physical disk or SMART health assessment.
-- CPU and memory measurements are point-in-time snapshots, not continuous monitoring.
-- The internet connectivity test checks TCP connectivity on port 443. It does not perform complete HTTPS certificate validation or application-level testing.
-- DNS results represent the configuration and resolution status at the time of execution.
-- The Windows services script inspects service states. It does not automatically start or stop services.
-- A Windows service configured for manual startup may be stopped without indicating a problem.
-- The report generator uses the latest available source reports, which may have been generated at different times.
-- The initial functional testing does not cover every possible error-handling or failure scenario.
+**Testing scope:** These results represent successful initial functional execution. They do not establish exhaustive testing across all Windows configurations, network environments, or failure conditions.
+
+Refer to [`documentation/functional-testing.md`](documentation/functional-testing.md) for additional testing details.
+
+## Technical Scope and Limitations
+
+- **Disk assessment:** Evaluates storage capacity and available space. It does not perform a comprehensive physical disk health or SMART diagnostic.
+- **CPU and memory:** Collects point-in-time utilization measurements rather than continuous performance monitoring.
+- **Network connectivity:** Tests selected connectivity conditions, including TCP port 443. A successful TCP connection does not establish complete HTTPS certificate or application-level validity.
+- **DNS diagnostics:** Results reflect DNS configuration and resolution at the time of execution.
+- **Windows services:** Inspects selected service states without automatically modifying service configurations or starting and stopping services.
+- **Service interpretation:** A manually configured Windows service may normally remain stopped when it is not needed.
+- **Report consolidation:** Uses the latest available source report for each category. Source reports may have different generation timestamps.
+- **Test coverage:** Initial functional testing does not cover every possible edge case or failure scenario.
 
 ## Skills Demonstrated
 
-- PowerShell scripting and automation
-- Windows operating system diagnostics
-- System and hardware information collection
-- Disk capacity assessment
-- CPU and RAM usage assessment
-- Network connectivity troubleshooting
-- DNS troubleshooting
-- Windows services inspection
-- TXT and CSV report generation
-- Functional testing and validation
-- Technical documentation
-- Git and GitHub project management
+**Windows Administration**
+- Windows operating system diagnostics.
+- Hardware and system information collection.
+- Disk capacity assessment.
+- CPU and memory utilization monitoring.
+- Windows services inspection.
 
-## Future Improvements
+**Networking and Troubleshooting**
+- Network adapter status assessment.
+- External IP connectivity testing.
+- DNS resolution troubleshooting.
+- TCP connectivity verification.
 
-- Implement additional error handling and edge-case tests.
-- Add configurable diagnostic thresholds.
-- Introduce a graphical user interface.
-- Add timestamp and system metadata validation to consolidated reports.
+**Automation and Reporting**
+- PowerShell scripting.
+- Diagnostic workflow automation.
+- TXT and CSV report generation.
+- Consolidated reporting.
+- Basic error handling and status reporting.
+
+**Development Practices**
+- Functional testing and validation.
+- Technical documentation.
+- Git version control.
+- GitHub repository management.
+
+## Future Development
+
+Potential enhancements for future versions include:
+
+- Expand error handling and edge-case testing.
+- Introduce configurable diagnostic thresholds.
+- Add continuous CPU and memory monitoring.
 - Improve report formatting and diagnostic summaries.
-- Develop automated test cases for script reliability.
+- Implement automated test cases.
+- Add a graphical user interface.
+- Introduce report timestamp consistency checks.
 
-## Project Status
+## Project Information
 
-**Version:** 1.0
+| Attribute | Details |
+|---|---|
+| Project | Enterprise Windows Helpdesk Diagnostic Toolkit |
+| Version | 1.0 |
+| Category | IT Support / Windows Administration |
+| Language | PowerShell |
+| Status | Initial implementation and functional testing completed |
+| Repository | [GitHub Project Repository](https://github.com/sharmiladeviramanujam/enterprise-windows-helpdesk-project) |
 
-**Status:** Initial implementation and functional testing completed.
+## Author's Note
 
-This project was developed as a practical portfolio project to demonstrate foundational Windows IT Support skills and PowerShell automation capabilities.
+This project was developed as a hands-on portfolio initiative to strengthen practical Windows troubleshooting, PowerShell automation, diagnostic reporting, and technical documentation skills relevant to entry-level IT Support and Helpdesk positions.
