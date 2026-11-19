@@ -75,7 +75,7 @@ enterprise-windows-helpdesk-project/
 ### Step 1: Clone the Repository
 
 ```powershell
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/sharmiladeviramanujam/enterprise-windows-helpdesk-project.git
 ```
 
 Replace the placeholder with your actual GitHub repository URL.
