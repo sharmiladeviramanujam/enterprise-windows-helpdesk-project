@@ -1,0 +1,28 @@
+# PowerShell temporary files
+*.tmp
+*.temp
+*.log
+
+# Windows temporary files
+Thumbs.db
+Desktop.ini
+
+# Editor and IDE files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+
+# Backup files
+*.bak
+*.old
+
+# Personal environment files
+.env
+.env.*
+
+# Generated diagnostic reports
+# Review and publish only sanitized sample reports
+reports/**/*.txt
+reports/**/*.csv
