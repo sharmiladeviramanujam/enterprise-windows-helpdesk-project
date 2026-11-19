@@ -1,93 +1,136 @@
-# Windows System Assessment Report
+\# System Assessment
 
-## 1. Project Information
 
-- **Project:** Enterprise Windows Help Desk & Troubleshooting Project
-- **Assessment Type:** Initial System Environment Assessment
-- **Assessment Date:** 19 November 2026
-- **Tools Used:** Windows PowerShell, CIM, Windows Management Instrumentation
 
-## 2. Operating System Information
+\## 1. Assessment Overview
 
-| Parameter | Observed Value |
+
+
+This document summarizes the Windows environment used to develop and test the Enterprise Windows Helpdesk Diagnostic Toolkit.
+
+
+
+The assessment records the general hardware and operating-system configuration relevant to testing the toolkit.
+
+
+
+\## 2. Operating System
+
+
+
+| Component | Assessment |
+
 |---|---|
-| Product Name | Windows 10 Home Single Language |
-| Initial Windows Version | 2009 |
-| Registry Display Version | 25H2 |
-| OS Build | 26200 |
-| Edition ID | CoreSingleLanguage |
 
-**Observation:** The reported Windows product name and version/build information are inconsistent. Further verification is required before confirming the exact Windows release.
+| Operating System | Windows 11 Home Single Language |
 
-## 3. Processor Information
+| Version | 25H2 |
 
-| Parameter | Observed Value |
+| Architecture | 64-bit |
+
+| Environment | Local Windows workstation |
+
+
+
+\## 3. Hardware Configuration
+
+
+
+| Component | Configuration |
+
 |---|---|
-| Processor | Intel Core i5-1334U |
-| Processor Generation | 13th Generation |
-| Physical Cores | 10 |
+
+| Processor | 13th Generation Intel Core i5-1334U |
+
+| Physical CPU Cores | 10 |
+
 | Logical Processors | 12 |
-| Reported Maximum Clock Speed | 1300 MHz |
 
-## 4. Memory Assessment
+| Installed RAM | Approximately 16 GB |
 
-| Parameter | Observed Value |
-|---|---|
-| Total Visible RAM | 15.69 GB |
-| Free Physical RAM | 3.53 GB |
+| Graphics | Intel Iris Xe Graphics |
 
-**Observation:** Approximately 15.69 GB of memory is visible to Windows. Free memory is a point-in-time measurement.
+| Storage | Approximately 456 GB system drive capacity |
 
-## 5. Storage Assessment
 
-| Parameter | Observed Value |
-|---|---|
-| Drive | C: |
-| Total Capacity | 456.08 GB |
-| Used Space | 118.61 GB |
-| Free Space | 337.46 GB |
 
-**Observation:** Approximately 74% of the reported C: drive capacity is free.
+\## 4. Network Environment
 
-## 6. Network Assessment
 
-| Adapter | Description | Status | Link Speed |
-|---|---|---|---|
-| Wi-Fi | Realtek 8821CE Wireless LAN 802.11ac PCI-E NIC | Up | 72.2 Mbps |
-| Ethernet | Realtek PCIe GbE Family Controller | Disconnected | 0 bps |
 
-**Observation:** The Wi-Fi adapter is active. Ethernet is disconnected.
+The system was tested using a Wi-Fi network connection.
 
-## 7. Basic System Health
 
-| Parameter | Observed Value |
-|---|---|
-| Last Boot Time | 16 October 2026, 17:47 |
-| System Status | OK |
 
-**Observation:** The operating system CIM query returned an OK status. This does not represent a complete hardware or software health assessment.
+The assessment toolkit checks:
 
-## 8. Tools and Commands Used
 
-- Get-ComputerInfo
-- Get-CimInstance Win32_Processor
-- Get-CimInstance Win32_OperatingSystem
-- Get-CimInstance Win32_LogicalDisk
-- Get-NetAdapter
-- Get-ItemProperty
 
-## 9. Assessment Conclusion
+\- Network adapter availability and status
 
-The initial system assessment successfully collected operating system, processor, memory, storage, network and basic system information.
+\- External IP connectivity
 
-The collected information establishes a baseline for future Windows troubleshooting exercises.
+\- DNS name resolution
 
-The Windows version/build discrepancy remains an open investigation item.
+\- TCP connectivity on port 443
 
-## 10. Next Steps
 
-- Verify the Windows release information.
-- Develop PowerShell system diagnostic scripts.
-- Investigate CPU and memory utilization.
-- Perform disk and network diagnostics.
-- Document troubleshooting findings and resolutions.
+
+An Ethernet adapter was also detected but was not connected during the assessment.
+
+
+
+\## 5. Assessment Purpose
+
+
+
+The system configuration provides a baseline environment for testing the toolkit's diagnostic scripts.
+
+
+
+The toolkit evaluates:
+
+
+
+\- Operating-system and system information
+
+\- Disk capacity and available space
+
+\- CPU and memory usage
+
+\- Internet connectivity
+
+\- DNS resolution
+
+\- Selected Windows service states
+
+\- Consolidated diagnostic report generation
+
+
+
+\## 6. Scope and Limitations
+
+
+
+\- Results represent the system condition at the time of assessment.
+
+\- CPU and memory readings are point-in-time measurements.
+
+\- Disk capacity checks do not perform a complete hardware or SMART health assessment.
+
+\- Network and DNS results may change depending on connectivity and configuration.
+
+\- Windows service states are inspected; services are not modified.
+
+
+
+\## 7. Conclusion
+
+
+
+The workstation provided a suitable Windows environment for developing and functionally testing the Enterprise Windows Helpdesk Diagnostic Toolkit.
+
+
+
+This document describes the general test environment and does not contain personal device identifiers.
+
